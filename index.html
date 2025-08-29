@@ -63,12 +63,13 @@
             font-weight: bold;
         }
 
-        .form-group input[type="text"] {
+        .form-group input[type="text"], .form-group select {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
+            background-color: white;
         }
 
         .question-block {
@@ -179,18 +180,36 @@
         <form id="evaluationForm">
             <div id="page-1" class="page active">
                 <h2>แบบประเมินพฤติกรรมเชิงจริยธรรม</h2>
+                
                 <div class="form-group">
                     <label for="name">ชื่อผู้รับการประเมิน</label>
-                    <input type="text" id="name" name="name" required>
+                    <select id="name" name="name" required>
+                        <option value="" disabled selected>--- กรุณาเลือกชื่อ ---</option>
+                        <option value="คุณภริญดา">คุณภริญดา</option>
+                        <option value="คุณอลิสา">คุณอลิสา</option>
+                        <option value="คุณนาชตาภา">คุณนาชตาภา</option>
+                        <option value="คุณนพวรรณ">คุณนพวรรณ</option>
+                        <option value="คุณสิริวรรณ">คุณสิริวรรณ</option>
+                        <option value="คุณปิยธิดา">คุณปิยธิดา</option>
+                        <option value="คุณธวัชชัย">คุณธวัชชัย</option>
+                        <option value="คุณสังวาลย์">คุณสังวาลย์</option>
+                        <option value="คุณทิพานัน">คุณทิพานัน</option>
+                        <option value="คุณพิมพ์สุดา">คุณพิมพ์สุดา</option>
+                        <option value="คุณนิสัย">คุณนิสัย</option>
+                        <option value="คุณสัตตบงกช">คุณสัตตบงกช</option>
+                        <option value="คุณปุ้ย">คุณปุ้ย</option>
+                    </select>
                 </div>
+                
                 <div class="form-group">
                     <label for="position">ตำแหน่ง</label>
-                    <input type="text" id="position" name="position" required>
+                    <select id="position" name="position" required>
+                        <option value="" disabled selected>--- กรุณาเลือกตำแหน่ง ---</option>
+                        <option value="พยาบาล">พยาบาล</option>
+                        <option value="เจ้าหน้าที่เทคนิคเครื่องมือพิเศษ/ผู้ช่วยพยาบาล /ผู้ช่วยเหลือคนไข้/คนงาน">เจ้าหน้าที่เทคนิคเครื่องมือพิเศษ/ผู้ช่วยพยาบาล /ผู้ช่วยเหลือคนไข้/คนงาน</option>
+                    </select>
                 </div>
-                <div class="form-group">
-                    <label for="department">หน่วยงาน</label>
-                    <input type="text" id="department" name="department" required>
-                </div>
+
                 <div class="button-container">
                     <button type="button" onclick="nextPage()">ตกลง</button>
                 </div>
@@ -565,9 +584,9 @@
         
         function validatePage(pageNumber) {
             const page = document.getElementById(`page-${pageNumber}`);
-            const inputs = page.querySelectorAll('input[required], textarea[required]');
+            const inputs = page.querySelectorAll('input[required], select[required], textarea[required]');
             for (let input of inputs) {
-                if (input.type === 'text' || input.tagName.toLowerCase() === 'textarea') {
+                if (input.type === 'text' || input.tagName.toLowerCase() === 'textarea' || input.tagName.toLowerCase() === 'select') {
                     if (input.value.trim() === '') return false;
                 } else if (input.type === 'radio') {
                     const name = input.name;
@@ -591,10 +610,7 @@
             submitButton.disabled = true;
             submitButton.textContent = 'กำลังส่ง...';
 
-            // --- !! สำคัญ !! ---
-            // นำ URL ที่ได้จากขั้นตอนที่ 2 มาวางที่นี่
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbwa7zrBcL2KAFjf_W0RvPEPbIyYeu37i_0PyJ0zp7r2gwrW0nUALAeujihVwNkiWHFr1Q/exec'; 
-            // --------------------
+            const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE'; // <-- URL ของคุณยังอยู่ที่เดิม
 
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
