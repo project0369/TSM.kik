@@ -610,7 +610,7 @@
             submitButton.disabled = true;
             submitButton.textContent = 'กำลังส่ง...';
 
-            const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE'; // <-- URL ของคุณยังอยู่ที่เดิม
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwa7zrBcL2KAFjf_W0RvPEPbIyYeu37i_0PyJ0zp7r2gwrW0nUALAeujihVwNkiWHFr1Q/exec'; // <-- URL ของคุณยังอยู่ที่เดิม
 
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
