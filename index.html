@@ -63,7 +63,7 @@
             font-weight: bold;
         }
 
-        .form-group input[type="text"], .form-group select {
+        .form-group select {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
@@ -107,15 +107,6 @@
             display: block;
             margin-bottom: 10px;
             font-size: 1.1em;
-        }
-
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            min-height: 120px;
-            box-sizing: border-box;
         }
 
         .button-container {
@@ -201,33 +192,12 @@
                     </select>
                 </div>
                 
-                <div class="form-group">
-                    <label for="position">ตำแหน่ง</label>
-                    <select id="position" name="position" required>
-                        <option value="" disabled selected>--- กรุณาเลือกตำแหน่ง ---</option>
-                        <option value="พยาบาล">พยาบาล</option>
-                        <option value="เจ้าหน้าที่เทคนิคเครื่องมือพิเศษ/ผู้ช่วยพยาบาล /ผู้ช่วยเหลือคนไข้/คนงาน">เจ้าหน้าที่เทคนิคเครื่องมือพิเศษ/ผู้ช่วยพยาบาล /ผู้ช่วยเหลือคนไข้/คนงาน</option>
-                    </select>
-                </div>
-
                 <div class="button-container">
                     <button type="button" onclick="nextPage()">ตกลง</button>
                 </div>
             </div>
 
             <div id="page-2" class="page info-page">
-                <h3>ส่วนที่ 1</h3>
-                <p>ประเมินพฤติกรรมเชิงจริยธรรมตามอัตลักษณ์ของโรงพยาบาล 3 ด้าน คือ<br>
-                    1. ความซื่อสัตย์<br>
-                    2. ความสามัคคี<br>
-                    3. ความมีน้ำใจ
-                </p>
-                <div class="button-container">
-                    <button type="button" onclick="nextPage()">ตกลง</button>
-                </div>
-            </div>
-
-            <div id="page-3" class="page info-page">
                 <h3>เกณฑ์การให้คะแนน</h3>
                 <p>
                     มีทั้งหมด 5 ระดับ ดังนี้<br>
@@ -242,7 +212,7 @@
                 </div>
             </div>
 
-            <div id="page-4" class="page">
+            <div id="page-3" class="page">
                 <h2 class="section-title">หลักคุณธรรม</h2>
                 <h3 class="section-subtitle">ความซื่อสัตย์</h3>
                  <div class="button-container">
@@ -250,7 +220,7 @@
                 </div>
             </div>
             
-            <div id="page-5" class="page question-page">
+            <div id="page-4" class="page question-page">
                 <h3 class="section-subtitle">พฤติกรรมเชิงจริยธรรม</h3>
                 <div class="question-block">
                     <p class="question-text">1.1 ปฏิบัติหน้าที่อย่างชอบธรรม ตรงต่อเวลา และไม่เบียดบังเวลาราชการ</p>
@@ -267,7 +237,7 @@
                 </div>
             </div>
             
-            <div id="page-6" class="page question-page">
+            <div id="page-5" class="page question-page">
                 <h3 class="section-subtitle">พฤติกรรมเชิงจริยธรรม</h3>
                 <div class="question-block">
                     <p class="question-text">1.2 มุ่งมั่น อุทิศตน เสียสละปฏิบัติหน้าที่ด้วยความรับผิดชอบอย่างเต็มความสามารถ</p>
@@ -284,7 +254,7 @@
                 </div>
             </div>
             
-             <div id="page-7" class="page question-page">
+             <div id="page-6" class="page question-page">
                 <h3 class="section-subtitle">พฤติกรรมเชิงจริยธรรม</h3>
                 <div class="question-block">
                     <p class="question-text">1.3 ปฏิบัติหน้าที่และให้บริการแก่ผู้มารับบริการอย่างเที่ยงธรรม ทั่วถึง และเท่าเทียม</p>
@@ -301,7 +271,7 @@
                 </div>
             </div>
             
-            <div id="page-8" class="page question-page">
+            <div id="page-7" class="page question-page">
                 <h3 class="section-subtitle">พฤติกรรมเชิงจริยธรรม</h3>
                 <div class="question-block">
                     <p class="question-text">1.4 ไม่เบียดบังทรัพย์สินของทางราชการเพื่อไปแสวงหาประโยชน์ส่วนตน</p>
@@ -318,7 +288,7 @@
                 </div>
             </div>
             
-            <div id="page-9" class="page question-page">
+            <div id="page-8" class="page question-page">
                 <h3 class="section-subtitle">พฤติกรรมเชิงจริยธรรม</h3>
                 <div class="question-block">
                     <p class="question-text">1.5 ให้บริการเต็มความรู้ ความสามารถ ด้วยความถูกต้อง รวดเร็ว รอบคอบ และไม่เลือกปฏิบัติ</p>
@@ -335,7 +305,7 @@
                 </div>
             </div>
 
-            <div id="page-10" class="page">
+            <div id="page-9" class="page">
                 <h2 class="section-title">หลักคุณธรรม</h2>
                 <h3 class="section-subtitle">ความสามัคคี</h3>
                  <div class="button-container">
@@ -343,7 +313,7 @@
                 </div>
             </div>
 
-            <div id="page-11" class="page question-page">
+            <div id="page-10" class="page question-page">
                 <h3 class="section-subtitle">พฤติกรรมเชิงจริยธรรม</h3>
                 <div class="question-block">
                     <p class="question-text">2.1 รับฟังความคิดเห็นของผู้อื่น</p>
@@ -360,7 +330,7 @@
                 </div>
             </div>
             
-             <div id="page-12" class="page question-page">
+             <div id="page-11" class="page question-page">
                 <h3 class="section-subtitle">พฤติกรรมเชิงจริยธรรม</h3>
                 <div class="question-block">
                     <p class="question-text">2.2 ให้ความร่วมมือในการปฏิบัติหน้างานให้บรรลุผล</p>
@@ -377,7 +347,7 @@
                 </div>
             </div>
             
-             <div id="page-13" class="page question-page">
+             <div id="page-12" class="page question-page">
                 <h3 class="section-subtitle">พฤติกรรมเชิงจริยธรรม</h3>
                 <div class="question-block">
                     <p class="question-text">2.3 ช่วยรักษา และร่วมทำความสะอาดตามหน่วยงาน หรือโรงพยาบาล</p>
@@ -394,7 +364,7 @@
                 </div>
             </div>
             
-             <div id="page-14" class="page question-page">
+             <div id="page-13" class="page question-page">
                 <h3 class="section-subtitle">พฤติกรรมเชิงจริยธรรม</h3>
                 <div class="question-block">
                     <p class="question-text">2.4 รู้บทบาทหน้าที่ของตนเองทั้งในฐานะผู้นำ และผู้ตาม ตลอดจนยอมรับการตัดสินใจของกลุ่ม</p>
@@ -411,7 +381,7 @@
                 </div>
             </div>
             
-             <div id="page-15" class="page question-page">
+             <div id="page-14" class="page question-page">
                 <h3 class="section-subtitle">พฤติกรรมเชิงจริยธรรม</h3>
                 <div class="question-block">
                     <p class="question-text">2.5 ช่วยป้องกัน ลดความเสี่ยงเกี่ยวกับสิ่งแวดล้อมและความปลอดภัย</p>
@@ -428,7 +398,7 @@
                 </div>
             </div>
 
-            <div id="page-16" class="page">
+            <div id="page-15" class="page">
                 <h2 class="section-title">หลักคุณธรรม</h2>
                 <h3 class="section-subtitle">ความมีน้ำใจ</h3>
                  <div class="button-container">
@@ -436,7 +406,7 @@
                 </div>
             </div>
             
-            <div id="page-17" class="page question-page">
+            <div id="page-16" class="page question-page">
                 <h3 class="section-subtitle">พฤติกรรมเชิงจริยธรรม</h3>
                 <div class="question-block">
                     <p class="question-text">3.1 มีความจริงใจไม่เห็นแก่ตัว มีความเอื้อเฟื้อเผื่อแผ่เอื้ออาทร</p>
@@ -453,7 +423,7 @@
                 </div>
             </div>
             
-            <div id="page-18" class="page question-page">
+            <div id="page-17" class="page question-page">
                 <h3 class="section-subtitle">พฤติกรรมเชิงจริยธรรม</h3>
                 <div class="question-block">
                     <p class="question-text">3.2 ช่วยลดการใช้พลังงานที่ไม่จำเป็นต่างๆ</p>
@@ -470,7 +440,7 @@
                 </div>
             </div>
             
-             <div id="page-19" class="page question-page">
+             <div id="page-18" class="page question-page">
                 <h3 class="section-subtitle">พฤติกรรมเชิงจริยธรรม</h3>
                 <div class="question-block">
                     <p class="question-text">3.3 รับฟัง ช่วยเหลือ ให้คำปรึกษา และบริการแก่ผู้มารับบริการและเพื่อนร่วมงานอย่างจริงใจ</p>
@@ -487,7 +457,7 @@
                 </div>
             </div>
             
-             <div id="page-20" class="page question-page">
+             <div id="page-19" class="page question-page">
                 <h3 class="section-subtitle">พฤติกรรมเชิงจริยธรรม</h3>
                 <div class="question-block">
                     <p class="question-text">3.4 เห็นแก่ประโยชน์ส่วนรวมมากกว่าประโยชน์ส่วนตน</p>
@@ -504,7 +474,7 @@
                 </div>
             </div>
             
-             <div id="page-21" class="page question-page">
+             <div id="page-20" class="page question-page">
                 <h3 class="section-subtitle">พฤติกรรมเชิงจริยธรรม</h3>
                 <div class="question-block">
                     <p class="question-text">3.5 มีส่วนร่วมในกิจกรรมต่างๆ ของโรงพยาบาล</p>
@@ -521,7 +491,7 @@
                 </div>
             </div>
             
-            <div id="page-22" class="page">
+            <div id="page-21" class="page">
                 <h3>สรุปพฤติกรรมเชิงจริยธรรมฯ ที่เด่นชัด (เลือกเพียง 1 ข้อ)</h3>
                 <div class="summary-options">
                     <label>
@@ -535,21 +505,11 @@
                     </label>
                 </div>
                  <div class="button-container">
-                    <button type="button" onclick="nextPage()">ถัดไป</button>
-                </div>
-            </div>
-            
-            <div id="page-23" class="page">
-                <h3>ส่วนที่ 2</h3>
-                <div class="form-group">
-                    <label for="feedback">กรุณาระบุคุณลักษณะที่ดีเชิงจริยธรรมฯ ของผู้รับการประเมิน หรือยกตัวอย่าง กิจกรรม หรือเหตุการณ์ที่เด่นชัด เป็นต้น</label>
-                    <textarea id="feedback" name="feedback" required></textarea>
-                </div>
-                <div class="button-container">
                     <button type="submit">ส่งแบบประเมิน</button>
                 </div>
             </div>
-        </form>
+            
+            </form>
     </div>
 
     <div id="popup">
@@ -561,6 +521,7 @@
 
     <script>
         let currentPage = 1;
+        // สคริปต์จะนับจำนวนหน้าทั้งหมดเองโดยอัตโนมัติ
         const totalPages = document.querySelectorAll('.page').length;
         const form = document.getElementById('evaluationForm');
 
@@ -568,6 +529,7 @@
             document.querySelectorAll('.page').forEach(page => {
                 page.classList.remove('active');
             });
+            // อัปเดต ID ของหน้าที่เรียกใช้
             document.getElementById(`page-${pageNumber}`).classList.add('active');
         }
 
@@ -584,9 +546,9 @@
         
         function validatePage(pageNumber) {
             const page = document.getElementById(`page-${pageNumber}`);
-            const inputs = page.querySelectorAll('input[required], select[required], textarea[required]');
+            const inputs = page.querySelectorAll('input[required], select[required]');
             for (let input of inputs) {
-                if (input.type === 'text' || input.tagName.toLowerCase() === 'textarea' || input.tagName.toLowerCase() === 'select') {
+                if (input.tagName.toLowerCase() === 'select') {
                     if (input.value.trim() === '') return false;
                 } else if (input.type === 'radio') {
                     const name = input.name;
